@@ -1,15 +1,124 @@
-def questions(option_number):
-    question_list = ['Who are you?','How are you?']
-def answers(option_number):
-    asnwer_list = ['Ronak','Good']
-def check(question_list,answer_list,option_number):
-    if (question_list[option_number]==answer_list[option_number]):
-        print("Your answer is Correct! You have won $")
-    else:
-        pass
-def game(question_list,answer_list,option_number):
-    print("Welcome to the game! You have to answer the questions correctly to win the game!")
-    print("You have 4 options to choose from! Good Luck!")
-    for i in range(2):
-        print(question_list[i])
-    pass
+questions = [
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+  [
+    "Which language was used to create fb?", "Python", "French", "JavaScript",
+    "Php", "None", 4
+  ],
+]
+
+levels = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000, 640000, 1280000, 2500000, 5000000, 10000000, 70000000]
+money = 0
+for i in range(0, len(levels)):
+  
+  question = questions[i]
+  print(f"\n\nQuestion for Rs. {levels[i]}")
+  print(f"a. {question[1]}          b. {question[2]} ")
+  print(f"c. {question[3]}          d. {question[4]} ")
+  reply = int(input("Enter your answer (1-4) or  0 to quit:\n" ))
+  if (reply == 0):
+    money = levels[i-1]
+    break
+  if(reply == question[-1]):
+    print(f"Correct answer, you have won Rs. {levels[i]}")
+    if(i == 4):
+      money = 10000
+    elif(i == 9):
+      money = 320000
+    elif(i == 15):
+      money = 70000000
+  else:
+    print("Wrong answer!")
+    break 
+
+print(f"Your take home money is {money}")
